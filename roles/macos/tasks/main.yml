@@ -1,0 +1,12 @@
+- name: setup os x defaults
+  osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+    state: present
+  notify:
+    - "{{ item.notify }}"
+  with_items:
+    - "{{ osx_defaults }}"
+

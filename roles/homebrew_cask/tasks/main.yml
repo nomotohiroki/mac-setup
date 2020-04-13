@@ -1,0 +1,10 @@
+- block:
+  - name: brew cask install
+    environment:
+      HOMEBREW_CASK_OPTS: --appdir=/Applications
+    homebrew_cask:
+      name: "{{ item.name }}"
+    with_items: "{{ homebrew_cask_packages }}"
+
+  tags:
+    - homebrew_cask

@@ -1,0 +1,8 @@
+packages:
+  - { name: wget }
+  - { name: pyenv }
+  - { name: nodenv }
+  - { name: yarn }
+  - { name: openssl }
+  - { name: mas }
+  - { name: awscli }

@@ -1,0 +1,12 @@
+homebrew_cask_packages:
+  - { name: google-japanese-ime }
+  - { name: google-chrome }
+  - { name: google-backup-and-sync }
+  - { name: docker }
+  - { name: iterm2 }
+  - { name: firefox }
+  - { name: gimp }
+  - { name: karabiner-elements }
+  - { name: visual-studio-code }
+  - { name: cyberduck }
+  - { name: musescore }

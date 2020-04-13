@@ -1,0 +1,5 @@
+mas_packages:
+  - { id: 803453959, name: slack }
+  - { id: 405843582, name: alfred }
+  - { id: 441258766, name: magnet }
+  - { id: 557168941, name: tweetbot2 }

@@ -1,0 +1,11 @@
+- name: killall dock
+  shell: |
+    killall Dock
+
+- name: killall finder
+  shell: |
+    killall Finder
+
+- name: dummy
+  shell: |
+    echo "nothing to do"

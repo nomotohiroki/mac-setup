@@ -1,0 +1,105 @@
+osx_defaults:
+  - name: dock マウスオーバーのハイライト
+    domain: com.apple.dock
+    key: mouse-over-hilte-stack
+    type: bool
+    value: true
+    notify: killall dock
+
+  - name: dock 位置
+    domain: com.apple.dock
+    key: orientation
+    type: string
+    value: "left"
+    notify: killall dock
+
+  - name: 表示サイズ
+    domain: com.apple.dock
+    key: tilesize
+    type: float
+    value: 32
+    notify: killall dock
+
+  - name: 拡大を有効
+    domain: com.apple.dock
+    key: magnification
+    type: bool
+    value: true
+    notify: killall dock
+
+  - name: 拡大時サイズ
+    domain: com.apple.dock
+    key: largesize
+    type: int
+    value: 58
+    notify: killall dock
+
+  - name: アプリケーションExpose
+    domain: com.apple.dock
+    key: showAppExposeGestureEnabled
+    type: int
+    value: 1
+    notify: killall dock
+
+  - name: 最近使ったアプリを非表示
+    domain: com.apple.dock
+    key: show-recents
+    type: int
+    value: 0
+    notify: killall dock
+
+  - name: key repeat
+    domain: NSGlobalDomain
+    key: KeyRepeat
+    type: int
+    value: 0
+    notify: dummy
+
+  - name: show extensions
+    domain: NSGlobalDomain
+    key: AppleShowAllExtensions
+    type: bool
+    value: true
+    notify: dummy
+
+  - name: バッテリーの%表示
+    domain: com.apple.menuextra.battery
+    key: ShowPercent
+    type: string
+    value: "YES"
+    notify: dummy
+
+  - name: 時刻フォーマット
+    domain: com.apple.menuextra.clock
+    key: DateFormat
+    type: string
+    value: "M\u6708d\u65e5(EEE) H:mm"
+    notify: dummy
+
+  - name: finder隠しファイル表示
+    domain: com.apple.finder
+    key: AppleShowAllFiles
+    type: bool
+    value: true
+    notify: killall finder
+
+  - name: DS_Storeを作らない
+    domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    type: bool
+    value: true
+    notify: dummy
+
+  - name: タップでクリック
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: Clicking
+    type: int
+    value: 1
+    notify: dummy
+
+  - name: タップでクリック2
+    domain: com.apple.AppleMultitouchTrackpad
+    key: Clicking
+    type: int
+    value: 1
+    notify: dummy

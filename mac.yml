@@ -1,0 +1,10 @@
+- name: mac setup
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  become: no
+  roles:
+    - homebrew
+    - homebrew_cask
+    - macos
+    - mas
