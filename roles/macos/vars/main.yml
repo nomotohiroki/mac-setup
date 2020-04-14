@@ -1,0 +1,4 @@
+links:
+  - { src: ~/mac-setup/dotfiles/zshrc, dest: ~/.zshrc }
+dirs:
+  - { path: ~/projects }
