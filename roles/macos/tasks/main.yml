@@ -22,4 +22,10 @@
     path: "{{ item.path }}"
   with_items:
     - "{{ dirs }}"
-
+- name: copy
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "{{ item.mode }}"
+  with_items:
+    - "{{ copy_files }}"

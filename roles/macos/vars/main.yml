@@ -1,4 +1,7 @@
 links:
   - { src: ~/mac-setup/dotfiles/zshrc, dest: ~/.zshrc }
+  - { src: ~/mac-setup/dotfiles/vimrc, dest: ~/.vimrc }
 dirs:
   - { path: ~/projects }
+copy_files:
+  - { src: ~/mac-setup/app_config/karabiner/karabiner.json, dest: ~/.config/karabiner/karabiner.json, mode: 600 }

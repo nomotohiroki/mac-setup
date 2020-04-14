@@ -6,3 +6,9 @@ packages:
   - { name: openssl }
   - { name: mas }
   - { name: awscli }
+  - { name: fzf }
+  - { name: docker }
+  - { name: ffmpeg }
+  - { name: jq }
+  - { name: tree }
+  - { name: pwgen }
