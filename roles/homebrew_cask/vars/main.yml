@@ -14,3 +14,4 @@ homebrew_cask_packages:
   - { name: steam }
   - { name: native-access }
   - { name: rekordbox }
+  - { name: zoomus }
