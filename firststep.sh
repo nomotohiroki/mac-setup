@@ -8,7 +8,7 @@ if ! command_exists brew ; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   brew doctor
   brew update
-  brew upgrade --all --cleanup
+  brew upgrade --cleanup
   brew -v
 fi
 
