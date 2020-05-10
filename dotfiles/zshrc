@@ -1,5 +1,5 @@
 alias ls='ls -F'
 alias ll='ls -l'
 
-eval "$(pyenv init -)"
-eval "$(nodenv init -)"
+export PATH="$HOME/.anyenv/bin:/usr/local/sbin:$PATH"
+eval "$(anyenv init -)" 

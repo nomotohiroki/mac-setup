@@ -1,7 +1,6 @@
 packages:
   - { name: wget }
-  - { name: pyenv }
-  - { name: nodenv }
+  - { name: anyenv }
   - { name: yarn }
   - { name: openssl }
   - { name: mas }
@@ -12,3 +11,5 @@ packages:
   - { name: jq }
   - { name: tree }
   - { name: pwgen }
+  - { name: emacs }
+  - { name: heroku }
