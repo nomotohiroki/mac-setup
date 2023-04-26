@@ -1,6 +1,6 @@
 packages:
   - { name: wget }
-  - { name: anyenv }
+  - { name: asdf }
   - { name: yarn }
   - { name: openssl }
   - { name: mas }
@@ -12,4 +12,3 @@ packages:
   - { name: tree }
   - { name: pwgen }
   - { name: emacs }
-  - { name: heroku }

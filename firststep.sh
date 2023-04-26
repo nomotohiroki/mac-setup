@@ -5,7 +5,9 @@ function command_exists {
 }
 
 if ! command_exists brew ; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/hiroki/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
   brew doctor
   brew update
   brew upgrade --cleanup
