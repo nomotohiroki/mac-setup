@@ -1,5 +1,5 @@
 - block:
-  - name: brew cask install
+  - name: brew install --cask
     environment:
       HOMEBREW_CASK_OPTS: --appdir=/Applications
     homebrew_cask:

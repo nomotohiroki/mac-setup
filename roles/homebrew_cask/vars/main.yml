@@ -1,13 +1,13 @@
 homebrew_cask_packages:
-  - { name: google-japanese-ime }
+#  - { name: google-japanese-ime }
   - { name: google-chrome }
   - { name: iterm2 }
-  - { name: karabiner-elements }
+#  - { name: karabiner-elements }
   - { name: visual-studio-code }
   - { name: cyberduck }
   - { name: musescore }
-  - { name: adobe-acrobat-reader }
+#  - { name: adobe-acrobat-reader }
   - { name: steam }
   - { name: native-access }
-  - { name: rekordbox }
-  - { name: zoom }
+#  - { name: rekordbox }
+#  - { name: zoom }

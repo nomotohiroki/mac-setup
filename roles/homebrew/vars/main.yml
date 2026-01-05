@@ -1,7 +1,6 @@
 packages:
   - { name: wget }
-  - { name: asdf }
-  - { name: yarn }
+  - { name: mise }
   - { name: openssl }
   - { name: mas }
   - { name: awscli }
