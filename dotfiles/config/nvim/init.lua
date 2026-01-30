@@ -62,6 +62,30 @@ require("lazy").setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- File Explorer (Neo-tree)
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- Requires a Nerd Font
+      "MunifTanjim/nui.nvim",
+    },
+    config = function()
+      require("neo-tree").setup({
+        window = {
+          width = 30,
+        },
+        filesystem = {
+          filtered_items = {
+            visible = true, -- Show hidden files by default
+          },
+        },
+      })
+      vim.keymap.set('n', '<leader>e', ':Neotree toggle left<CR>', { desc = '[E]xplorer toggle' })
+    end
+  },
+
   -- Finder (Telescope)
   {
     'nvim-telescope/telescope.nvim',
