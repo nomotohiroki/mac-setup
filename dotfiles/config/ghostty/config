@@ -1,0 +1,23 @@
+# Font
+font-family = "Hack Nerd Font Mono"
+font-size = 14
+font-feature = ["-calt", "-liga", "-dlig"]
+
+# Theme
+theme = "Catppuccin Mocha"
+
+# Window
+window-padding-x = 10
+window-padding-y = 10
+window-decoration = false
+macos-titlebar-style = "transparent"
+
+# Shell integration
+shell-integration = "zsh"
+
+# Cursor
+cursor-style = "block"
+cursor-style-blink = false
+
+# Keybindings
+keybind = global:cmd+grave_accent=toggle_quick_terminal

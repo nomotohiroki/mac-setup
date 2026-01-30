@@ -1,8 +1,0 @@
-- block:
-  - name: brew install
-    homebrew:
-      name: "{{ item.name }}"
-    with_items: "{{ packages }}"
-
-  tags:
-    - homebrew
