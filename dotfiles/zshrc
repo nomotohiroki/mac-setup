@@ -1,32 +1,67 @@
-alias ls='ls -F'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-bindkey -e
+# --- Environment Variables ---
+export LANG=en_US.UTF-8
 
+# Homebrew (Apple Silicon)
+if [[ -f /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Path additions
+path=(
+    $HOME/bin
+    $path
+)
+
+# --- Mise (Version Manager) ---
+# Replaces anyenv/nodenv/pyenv etc.
 eval "$(mise activate zsh)"
 
-# git-promptの読み込み
-source ~/.zsh/git-prompt.sh
+# --- Sheldon (Plugin Manager) ---
+eval "$(sheldon source)"
 
-# git-completionの読み込み
-fpath=(~/.zsh $fpath)
-zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-autoload -Uz compinit && compinit
+# --- Starship (Prompt) ---
+eval "$(starship init zsh)"
 
-# プロンプトのオプション表示設定
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWSTASHSTATE=true
-GIT_PS1_SHOWUPSTREAM=auto
+# --- Zoxide (Better cd) ---
+eval "$(zoxide init zsh)"
 
-# プロンプトの表示設定(好きなようにカスタマイズ可)
-setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
-\$ '
+# --- Aliases ---
+# Modern Replacements
+alias ls='eza --icons'
+alias ll='eza -l --icons --git'
+alias la='eza -la --icons --git'
+alias tree='eza --tree --icons'
+alias cat='bat'
+alias grep='rg'
+alias find='fd'
+
+# Git
+alias g='git'
+alias lg='lazygit'
+
+# Editors
+alias v='nvim'
+alias vim='nvim'
+alias vi='nvim'
+
+# Config Shortcuts
+alias zshconfig="nvim ~/.zshrc"
+alias reload="source ~/.zshrc"
+
+# --- Keybindings ---
+bindkey -e
+bindkey '^R' history-incremental-search-backward
+
+# --- Legacy/Custom Settings (Migrated from old zshrc) ---
+#export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
+#export TESTCONTAINERS_RYUK_DISABLED=true
+#export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE="$HOME/.colima/default/docker.sock"
+#export DOCKER_CLI_PLUGIN_PATH="/opt/homebrew/lib/docker/cli-plugins"
+#export AWS_PROFILE=Administrator-807485159410
+
+# FZF Setup (Assuming installed via brew)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
-export TESTCONTAINERS_RYUK_DISABLED=true
-export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE="$HOME/.colima/default/docker.sock"
-export DOCKER_CLI_PLUGIN_PATH="/opt/homebrew/lib/docker/cli-plugins"
-export AWS_PROFILE=Administrator-807485159410
+# Added by Antigravity CLI installer
+export PATH="/Users/hiroki/.local/bin:$PATH"
