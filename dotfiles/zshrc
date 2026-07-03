@@ -53,11 +53,15 @@ bindkey -e
 bindkey '^R' history-incremental-search-backward
 
 # --- Legacy/Custom Settings (Migrated from old zshrc) ---
-export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
-export TESTCONTAINERS_RYUK_DISABLED=true
-export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE="$HOME/.colima/default/docker.sock"
-export DOCKER_CLI_PLUGIN_PATH="/opt/homebrew/lib/docker/cli-plugins"
-export AWS_PROFILE=Administrator-807485159410
+#export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
+#export TESTCONTAINERS_RYUK_DISABLED=true
+#export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE="$HOME/.colima/default/docker.sock"
+#export DOCKER_CLI_PLUGIN_PATH="/opt/homebrew/lib/docker/cli-plugins"
+#export AWS_PROFILE=Administrator-807485159410
 
 # FZF Setup (Assuming installed via brew)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/hiroki/.local/bin:$PATH"
