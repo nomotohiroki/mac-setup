@@ -30,14 +30,15 @@ brew "emacs"
 # brew "docker"
 
 # --- GUI Applications (Cask) ---
+cask "cyberduck"
 cask "ghostty"
 cask "google-chrome"
 cask "iterm2"
-cask "visual-studio-code"
-cask "cyberduck"
+cask "karabiner-elements"
 cask "musescore"
-cask "steam"
 cask "native-access"
+cask "steam"
+cask "visual-studio-code"
 
 # --- Fonts ---
 # Fonts have been moved to homebrew/cask
