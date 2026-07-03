@@ -2,15 +2,15 @@
 
 # 2行プロンプト構成で、1行目にディレクトリやGitステータス、2行目に入力文字を配置
 format = """
-$os\\
-$directory\\
-$git_branch\\
-$git_status\\
-$golang\\
-$nodejs\\
-$rust\\
-$docker_context\\
-$line_break\\
+$os\
+$directory\
+$git_branch\
+$git_status\
+$golang\
+$nodejs\
+$rust\
+$docker_context\
+$line_break\
 $character"""
 
 add_newline = true
